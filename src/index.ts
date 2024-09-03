@@ -10,7 +10,9 @@ const app = express()
 // Logger
 app.use(morgan('dev'))
 // CORS
-
+app.use(cors({
+    credentials:true
+}))
 // Middlewares
 app.use(express.urlencoded({extended:true}))
 app.use(express.json())
